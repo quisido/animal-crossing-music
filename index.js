@@ -62,3 +62,18 @@ audio.addEventListener('canplay', () => {
   audio.play();
 });
 audio.addEventListener('ended', play);
+
+
+
+const handleClick = () => {
+  if (audio.paused) {
+    play();
+    audio.volume = 1;
+  }
+  else if (audio.volume === 0) {
+    audio.volume = 1;
+  }
+  else {
+    audio.volume = 0;
+  }
+};
