@@ -1,0 +1,12 @@
+{
+  "name": "animal-crossing-music",
+  "version": "0.1.0",
+  "author": "Charles Stover <github@charlesstover.com>",
+  "description": "Synchronize your day's background music with Animal Crossing.",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": "https://github.com/GamingMedley/animal-crossing-music.git",
+  "scripts": {
+    "duration": "node utils/duration.js"
+  }
+}

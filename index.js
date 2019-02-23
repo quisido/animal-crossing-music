@@ -1,5 +1,7 @@
 const audio = document.getElementsByTagName('audio').item(0);
 
+const durations = Object.create(null);
+
 const lastPlayedCache = {
   hour: null,
   themes: new Set(),
@@ -76,4 +78,15 @@ const handleClick = () => {
   else {
     audio.volume = 0;
   }
+};
+
+
+
+const setDurations = d => {
+  Object.assign(durations, d);
+  const play = document.createElement('a');
+  play.setAttribute('href', '#');
+  play.addEventListener('click', handleClick);
+  play.appendChild(document.createTextNode('Play'));
+  document.getElementsByTagName('div').item(0).appendChild(play);
 };
