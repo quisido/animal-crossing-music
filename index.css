@@ -1,0 +1,55 @@
+a {
+  text-decoration: none;
+}
+
+audio {
+  display: none;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+body::before {
+  background-attachment: fixed;
+  background-image: url('images/bg.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  filter: grayscale(100%) opacity(33%);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition-delay: 0s;
+  transition-duration: 0.5s;
+  transition-property: filter;
+  transition-timing-function: ease-out;
+  width: 100%;
+}
+
+body.muted::before {
+  filter: grayscale(50%) opacity(50%);
+}
+
+body.playing::before {
+  filter: grayscale(0%) opacity(100%);
+}
+
+div {
+  font-size: 12rem;
+  z-index: 1;
+  user-select: none;
+}
+
+html {
+  font-size: 16px;
+  height: 100%;
+}

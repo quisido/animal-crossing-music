@@ -68,15 +68,31 @@ audio.addEventListener('ended', play);
 
 
 const handleClick = () => {
+  const link = document.getElementsByTagName('a').item(0);
   if (audio.paused) {
+    document.body.classList.add('playing');
+    document.body.classList.remove('muted');
     play();
     audio.volume = 1;
+    link.setAttribute('title', 'Mute');
+    link.removeChild(link.firstChild);
+    link.appendChild(document.createTextNode('🔊'));
   }
   else if (audio.volume === 0) {
+    document.body.classList.add('playing');
+    document.body.classList.remove('muted');
     audio.volume = 1;
+    link.setAttribute('title', 'Unmute');
+    link.removeChild(link.firstChild);
+    link.appendChild(document.createTextNode('🔊'));
   }
   else {
+    document.body.classList.add('muted');
+    document.body.classList.remove('playing');
     audio.volume = 0;
+    link.setAttribute('title', 'Mute');
+    link.removeChild(link.firstChild);
+    link.appendChild(document.createTextNode('🔈'));
   }
 };
 
@@ -87,6 +103,6 @@ const setDurations = d => {
   const play = document.createElement('a');
   play.setAttribute('href', '#');
   play.addEventListener('click', handleClick);
-  play.appendChild(document.createTextNode('Play'));
+  play.appendChild(document.createTextNode('🔈'));
   document.getElementsByTagName('div').item(0).appendChild(play);
 };
