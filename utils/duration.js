@@ -1,6 +1,7 @@
 const child_process = require('child_process');
 const fs = require('fs');
 
+const CWD = process.cwd();
 const ROOT = 'music';
 
 const getDurations = dir => {
@@ -20,8 +21,8 @@ const getDurations = dir => {
 
     // Get the duration of the file.
     else if (stat.isFile()) {
-      const ffmpeg = child_process.spawnSync('ffmpeg', [ '-i', file ], {
-        cwd: dir,
+      const ffmpeg = child_process.spawnSync('ffmpeg', [ '-i', `${CWD}\\${path}` ], {
+        cwd: 'C:\\Program Files',
         windowsHide: true,
       });
       const duration = ffmpeg.stderr.toString('utf8').match(/Duration: (\d{2}):(\d{2}):(\d{2})\.(\d{2})/);
