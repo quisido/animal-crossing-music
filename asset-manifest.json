@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/animal-crossing-music/static/css/main.844bdf37.chunk.css",
+    "main.js": "/animal-crossing-music/static/js/main.96da0045.chunk.js",
+    "main.js.map": "/animal-crossing-music/static/js/main.96da0045.chunk.js.map",
+    "runtime-main.js": "/animal-crossing-music/static/js/runtime-main.b3060f0d.js",
+    "runtime-main.js.map": "/animal-crossing-music/static/js/runtime-main.b3060f0d.js.map",
+    "static/js/2.98e3e33e.chunk.js": "/animal-crossing-music/static/js/2.98e3e33e.chunk.js",
+    "static/js/2.98e3e33e.chunk.js.map": "/animal-crossing-music/static/js/2.98e3e33e.chunk.js.map",
+    "index.html": "/animal-crossing-music/index.html",
+    "static/css/main.844bdf37.chunk.css.map": "/animal-crossing-music/static/css/main.844bdf37.chunk.css.map",
+    "static/js/2.98e3e33e.chunk.js.LICENSE.txt": "/animal-crossing-music/static/js/2.98e3e33e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b3060f0d.js",
+    "static/js/2.98e3e33e.chunk.js",
+    "static/css/main.844bdf37.chunk.css",
+    "static/js/main.96da0045.chunk.js"
+  ]
+}
